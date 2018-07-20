@@ -43,6 +43,45 @@ SectionPagesMenu = "products"
   identifier = "enterprise_kapacitor"
   weight = 50
   url = "/enterprise_kapacitor/"
+[[menu.products]]
+  name = "Client Libraries"
+  identifier = "client_libraries"
+  weight = 60
+  url = "/client_libraries/"
+[[menu.client_libraries]]
+  name = "Libraries"
+  identifier = "libraries"
+  weight = 10
+  url = "/client_libraries/libraries/"
+[[menu.client_libraries]]
+  name = "Writing client libraries"
+  identifier = "certification"
+  weight = 20
+  url = "/client_libraries/certification/"
+[[menu.client_libraries]]
+  name = "Officially certificated libraries"
+  identifier = "certificated"
+  weight = 30
+  url = "/client_libraries/libraries/certificated/"
+  parent = "libraries"
+[[menu.client_libraries]]
+  name = "The third-party libraries"
+  identifier = "third_party"
+  weight = 40
+  url = "/client_libraries/libraries/third_party/"
+  parent = "libraries"
+[[menu.client_libraries]]
+  name = "Conventions"
+  identifier = "conventions"
+  weight = 50
+  url = "/client_libraries/certification/conventions/"
+  parent = "certification"
+[[menu.client_libraries]]
+  name = "Overall structure"
+  identifier = "structure"
+  weight = 50
+  url = "/client_libraries/certification/structure/"
+  parent = "certification"
 
   # InfluxDB v1.4 Menu
   [[menu.influxdb_1_4]]
