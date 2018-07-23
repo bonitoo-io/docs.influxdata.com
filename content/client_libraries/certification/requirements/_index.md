@@ -17,7 +17,39 @@ The common use cases are:
 The following description helps to understand how to write the proper client library.  
 
 ### Writes
-TBD: batching, disable batching, udp
+
+> Write measurement data points to InfluxDB. 
+
+- The client libraries MUST provide writing data as a batch and also one by one.
+- The client SHOULD also support writing data points to InfluxDB through [UDP](/influxdb/latest/supported_protocols/udp).
+
+#### The batching configuration that client SHOULD support
+
+
+1.  Batch Size
+
+    The number of data points to collect in the one batch.  
+    Default: `1000`
+
+2.  Flush Interval
+
+    The maximum number of time that the data point can be buffered before write to InfluxDB.    
+    Default: `1000 ms`  
+    
+3.  Jitter Interval
+
+    The maximum number of time to increase the batch flush interval (by a random amount)  
+    Default: `0 ms`  
+
+4.  Retry Interval
+
+    The number of time to retry unsuccessful write  
+    Default: `1000 ms`  
+
+5.  Buffer Limit
+
+    The maximum number of unwritten stored points.  
+    Default: `10000`  
 
 ### Queries
 TBD: chunking, result mapping, asynchronous 
