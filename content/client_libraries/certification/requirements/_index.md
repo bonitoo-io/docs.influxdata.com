@@ -79,7 +79,13 @@ The High-level API is very convenient to help user simplify common task for mana
 * Fields - show keys
 
 ### Documentation
-TBD: documents all features, examples
+The client MUST have documented:
+
+* How configure connection to InfluxDB
+* How use writes
+* How use queries
+
+The client SHOULD have documentation with all their features.
 
 ### Error Handling
 TBD: retry
