@@ -60,9 +60,9 @@ SectionPagesMenu = "products"
   url = "/client_libraries/certification/"
 [[menu.client_libraries]]
   name = "Officially certificated libraries"
-  identifier = "certificated"
+  identifier = "certified"
   weight = 30
-  url = "/client_libraries/libraries/certificated/"
+  url = "/client_libraries/libraries/certified/"
   parent = "libraries"
 [[menu.client_libraries]]
   name = "The third-party libraries"
