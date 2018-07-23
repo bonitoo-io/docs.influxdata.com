@@ -1,6 +1,0 @@
----
-title: Overall structure
----
-
-
-

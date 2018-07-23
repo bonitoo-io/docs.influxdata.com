@@ -71,16 +71,16 @@ SectionPagesMenu = "products"
   url = "/client_libraries/libraries/third_party/"
   parent = "libraries"
 [[menu.client_libraries]]
-  name = "Conventions"
-  identifier = "conventions"
+  name = "Requirements"
+  identifier = "requirements"
   weight = 50
-  url = "/client_libraries/certification/conventions/"
+  url = "/client_libraries/certification/requirements/"
   parent = "certification"
 [[menu.client_libraries]]
-  name = "Overall structure"
-  identifier = "structure"
-  weight = 50
-  url = "/client_libraries/certification/structure/"
+  name = "Client Comparison"
+  identifier = "comparison"
+  weight = 60
+  url = "/client_libraries/certification/comparison/"
   parent = "certification"
 
   # InfluxDB v1.4 Menu
