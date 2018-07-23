@@ -28,6 +28,9 @@ TBD: wrapping common queries (management, retention policy)
 ### Flux
 TBD: query, chunking, management
 
+### Connection
+TBD: authenticate, ssl 
+
 ### Error Handling
 TBD: retry
 
