@@ -60,27 +60,29 @@ The following description helps to understand how to write the proper client lib
 * The client MUST support streaming query responses - [chunking](/influxdb/latest/guides/querying_data#chunking/).
 * The client SHOULD support asynchronous querying.
 
+### Connection
+
+> The configuration of the connection.
+
+* The client MUST support [authenticated connection](/influxdb/latest/administration/authentication_and_authorization/#authentication).
+* The client SHOULD support communication over [HTTPS](/influxdb/latest/administration/administration/https_setup/).
+
 ### High-level API
 The High-level API is very convenient to help user simplify common task for management the InfluxDB and SHOULD be implemented by client libraries.
 
-* Database - show, create, delete
+* User - show, create, drop, grant privileges
+* Database - show, create, drop
 * Retention policies - show, create, alter, drop
 * Series - show, drop
 * Measurement - show, drop
 * Tags - show keys, show tags
 * Fields - show keys
 
-### Flux
-TBD: query, chunking, management
-
-### Connection
-TBD: authenticate, ssl 
+### Documentation
+TBD: documents all features, examples
 
 ### Error Handling
 TBD: retry
 
-### Documentation
-TBD: documents all features, examples
-
-
-
+### Flux
+TBD: query, chunking, management
