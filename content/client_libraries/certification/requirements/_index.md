@@ -61,7 +61,14 @@ The following description helps to understand how to write the proper client lib
 * The client SHOULD support asynchronous querying.
 
 ### High-level API
-TBD: wrapping common queries (management, retention policy)
+The High-level API is very convenient to help user simplify common task for management the InfluxDB and SHOULD be implemented by client libraries.
+
+* Database - show, create, delete
+* Retention policies - show, create, alter, drop
+* Series - show, drop
+* Measurement - show, drop
+* Tags - show keys, show tags
+* Fields - show keys
 
 ### Flux
 TBD: query, chunking, management
