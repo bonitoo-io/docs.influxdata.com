@@ -20,7 +20,7 @@ The following description helps to understand how to write the proper client lib
 
 > Write measurement data points to InfluxDB. 
 
-- The client libraries MUST provide writing data as a batch and also one by one.
+- The client MUST provide writing data as a batch and also one by one.
 - The client SHOULD also support writing data points to InfluxDB through [UDP](/influxdb/latest/supported_protocols/udp).
 
 #### The batching configuration that client SHOULD support
@@ -52,7 +52,13 @@ The following description helps to understand how to write the proper client lib
     Default: `10000`  
 
 ### Queries
-TBD: chunking, result mapping, asynchronous 
+
+> Querying data from the InfluxDB.
+
+* The client MUST provide way how to map query result to language objects which respects the naming conventions of the language.
+* The client MUST provide way how to get unmodified query result.
+* The client MUST support streaming query responses - [chunking](/influxdb/latest/guides/querying_data#chunking/).
+* The client SHOULD support asynchronous querying.
 
 ### High-level API
 TBD: wrapping common queries (management, retention policy)
