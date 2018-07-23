@@ -71,15 +71,21 @@ SectionPagesMenu = "products"
   url = "/client_libraries/libraries/third_party/"
   parent = "libraries"
 [[menu.client_libraries]]
-  name = "Requirements"
-  identifier = "requirements"
+  name = "Flux"
+  identifier = "flux-requirements"
   weight = 50
-  url = "/client_libraries/certification/requirements/"
+  url = "/client_libraries/certification/flux/"
+  parent = "certification"
+[[menu.client_libraries]]
+  name = "InfluxDB"
+  identifier = "influxdb-requirements"
+  weight = 60
+  url = "/client_libraries/certification/influxdb/"
   parent = "certification"
 [[menu.client_libraries]]
   name = "Client Comparison"
   identifier = "comparison"
-  weight = 60
+  weight = 70
   url = "/client_libraries/certification/comparison/"
   parent = "certification"
 

@@ -1,7 +1,7 @@
 ---
-title: Requirements
+title: InfluxDB Client Requirements
 ---
-This document covers what functionality and InfluxDB client libraries should offer, with the aim of consistency across libraries, making the easy use cases easy and avoiding offering functionality that may lead users down the wrong path.
+This document covers what functionality the InfluxDB client libraries should offer, with the aim of consistency across libraries, making the easy use cases easy and avoiding offering functionality that may lead users down the wrong path.
 
 ## Conventions
 
@@ -86,9 +86,3 @@ The client MUST have documented:
 * How use queries
 
 The client SHOULD have documentation with all their features.
-
-### Error Handling
-TBD: retry
-
-### Flux
-TBD: query, chunking, management
