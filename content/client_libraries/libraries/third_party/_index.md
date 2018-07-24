@@ -12,6 +12,8 @@ Choose a Flux client library that matches the language in which your application
 ## InfluxDB
 Choose a InfluxDB client library that matches the language in which your application is written.
 
-* 
-* 
-*  
+* [C++](https://github.com/d-led/influxdb-cpp-rest)
+* [Erlang](https://github.com/gossiperl/erflux)
+* [Clojure](https://github.com/olauzon/capacitor)
+* [Lisp](https://github.com/mmaul/cl-influxdb)
+* [Perl](https://github.com/hirose31/p5-InfluxDB) 
