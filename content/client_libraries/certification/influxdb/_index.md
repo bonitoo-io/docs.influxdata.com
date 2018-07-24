@@ -1,5 +1,5 @@
 ---
-title: InfluxDB Client Requirements
+title: InfluxDB Client Guidelines
 ---
 This document covers what functionality the InfluxDB client libraries should offer, with the aim of consistency across libraries, making the easy use cases easy and avoiding offering functionality that may lead users down the wrong path.
 
@@ -7,7 +7,7 @@ This document covers what functionality the InfluxDB client libraries should off
 
 MUST/MUST NOT/SHOULD/SHOULD NOT/MAY have the meanings given in [https://www.ietf.org/rfc/rfc2119.txt](https://www.ietf.org/rfc/rfc2119.txt).
 
-The common use cases are:
+#### The common use cases are:
 
 * Write measurement/measurements in batch or point by point
 * Query data and mapping result to a language objects
@@ -38,12 +38,12 @@ The following description helps to understand how to write the proper client lib
     
 3.  Jitter Interval
 
-    The maximum number of time to increase the batch flush interval (by a random amount)  
+    The maximum number of time to increase the batch flush interval (by a random amount).  
     Default: `0 ms`  
 
 4.  Retry Interval
 
-    The number of time to retry unsuccessful write  
+    The number of time to retry unsuccessful write.  
     Default: `1000 ms`  
 
 5.  Buffer Limit
