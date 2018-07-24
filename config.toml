@@ -59,18 +59,27 @@ SectionPagesMenu = "products"
   weight = 20
   url = "/client_libraries/certification/"
 [[menu.client_libraries]]
+<<<<<<< HEAD
   name = "Officially certified libraries"
+=======
+  name = "Certified"
+>>>>>>> c3e7dc4d7596cfa994304f297ea113aeba57e80e
   identifier = "certified"
   weight = 30
   url = "/client_libraries/libraries/certified/"
   parent = "libraries"
 [[menu.client_libraries]]
+<<<<<<< HEAD
   name = "The third-party libraries"
+=======
+  name = "Third-party tools"
+>>>>>>> c3e7dc4d7596cfa994304f297ea113aeba57e80e
   identifier = "third_party"
   weight = 40
   url = "/client_libraries/libraries/third_party/"
   parent = "libraries"
 [[menu.client_libraries]]
+<<<<<<< HEAD
   name = "Conventions"
   identifier = "conventions"
   weight = 50
@@ -81,6 +90,24 @@ SectionPagesMenu = "products"
   identifier = "structure"
   weight = 50
   url = "/client_libraries/certification/structure/"
+=======
+  name = "Flux"
+  identifier = "flux-requirements"
+  weight = 50
+  url = "/client_libraries/certification/flux/"
+  parent = "certification"
+[[menu.client_libraries]]
+  name = "InfluxDB"
+  identifier = "influxdb-requirements"
+  weight = 60
+  url = "/client_libraries/certification/influxdb/"
+  parent = "certification"
+[[menu.client_libraries]]
+  name = "Client Comparison"
+  identifier = "comparison"
+  weight = 70
+  url = "/client_libraries/certification/comparison/"
+>>>>>>> c3e7dc4d7596cfa994304f297ea113aeba57e80e
   parent = "certification"
 
   # InfluxDB v1.4 Menu

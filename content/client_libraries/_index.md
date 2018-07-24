@@ -4,24 +4,38 @@ title: Client Libraries
 
 # Overview
 
-Choose a InfluxDB client library that matches the language in which your application is written. This lets you allow store and retrieve data from InfluxDB.
+Choose a InfluxDB or Flux client library that matches the language in which your application is written.
 
-## Libraries
+## Flux
 
-Officially certificated client libraries:
+This lets you allow retrieve data from Flux.
 
-* [Go](https://example.com)
-* [Java](https://example.com)
-* [JavaScript](https://example.com)
-* [Python](https://example.com)
+#### Officially certified client libraries:
 
-The third-party unsupported client libraries:
+* ?
+* [see more](/client_libraries/libraries/certified/#flux)
 
-* [Lua](https://example.com)
-* [Haskell](https://example.com)
+#### The third-party unsupported client libraries:
 
-## Certification
-
-...
+* ?
+* [see more](/client_libraries/libraries/third_party/#flux)
 
 
+
+## InfluxDB
+
+This lets you allow store and retrieve data from InfluxDB.
+
+#### Officially certified client libraries:
+
+* [Go](https://github.com/influxdata/influxdb/tree/master/client)
+* [Java](https://github.com/influxdata/influxdb-java)
+* [Python](https://github.com/influxdb/influxdb-python)
+* [Node.js](https://github.com/node-influx/node-influx)
+* [see more](/client_libraries/libraries/certified/#influxdb)
+
+#### The third-party unsupported client libraries:
+
+* [Haskell](https://github.com/maoe/influxdb-haskell)
+* [Erlang](https://github.com/gossiperl/erflux)
+* [see more](/client_libraries/libraries/third_party/#influxdb)
