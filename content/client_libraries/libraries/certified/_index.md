@@ -1,3 +1,3 @@
 ---
-title: Officially certificated libraries
+title: Officially certified libraries
 ---
