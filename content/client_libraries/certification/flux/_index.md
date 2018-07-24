@@ -7,6 +7,8 @@ This document covers what functionality the Flux client libraries should offer, 
 
 MUST/MUST NOT/SHOULD/SHOULD NOT/MAY have the meanings given in [https://www.ietf.org/rfc/rfc2119.txt](https://www.ietf.org/rfc/rfc2119.txt).
 
+#### The name conventions
+
 #### The common use cases are:
 
 * Query data and mapping result to a language objects
