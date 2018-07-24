@@ -1,8 +1,8 @@
 ---
-title: Officially certificated libraries
+title: Officially certified libraries
 ---
 
-The certificated libraries are supported by InfluxData and comply the guidelines from [Writing client libraries](/client_libraries/certification/).
+The certified libraries are supported by InfluxData and comply the guidelines from [Writing client libraries](/client_libraries/certification/).
 
 ## Flux
 Choose a Flux client library that matches the language in which your application is written.

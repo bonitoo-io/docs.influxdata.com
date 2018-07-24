@@ -10,7 +10,7 @@ Choose a InfluxDB or Flux client library that matches the language in which your
 
 This lets you allow retrieve data from Flux.
 
-#### Officially certificated client libraries:
+#### Officially certified client libraries:
 
 * ?
 * [see more](/client_libraries/libraries/certified/#flux)
@@ -26,7 +26,7 @@ This lets you allow retrieve data from Flux.
 
 This lets you allow store and retrieve data from InfluxDB.
 
-#### Officially certificated client libraries:
+#### Officially certified client libraries:
 
 * [Go](https://github.com/influxdata/influxdb/tree/master/client)
 * [Java](https://github.com/influxdata/influxdb-java)
