@@ -135,16 +135,16 @@ The following table compare the features and capabilities of InfluxDB clients:
             <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
             <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
             <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
-            <td>Missing: <code>consistency, precision, rp</code> options for writting, asynchronous batching, chunked query, High-level API, Documentation.</td>
+            <td>Missing: <code>consistency, precision, rp</code> options for writting, asynchronous batching, chunked query, High-level API. Insufficient documentation.</td>
         </tr>
         <tr>
             <td><strong><a href="https://github.com/olauzon/capacitor" target="_blank">Clojure</a></strong></td>
             <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
             <td><span class="icon cross" style="color:#BF3D5E;"></span></td>
             <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
+            <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
-            <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
-            <td></td>
+            <td>Missing: <code>consistency, precision, rp</code> options for writting, asynchronous batching, chunked query. Partial support for High-level API.</td>
         </tr>
         <tr>
             <td><strong><a href="https://github.com/mmaul/cl-influxdb" target="_blank">Lisp</a></strong></td>
