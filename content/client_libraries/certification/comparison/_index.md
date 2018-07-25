@@ -32,7 +32,7 @@ The following table compare the features and capabilities of InfluxDB clients:
             <th>Writes</th>
             <th>Batching</th>
             <th>Queries</th>
-            <th>High-level API</th>
+            <th style="white-space: nowrap;">High-level API</th>
             <th>Documentation</th>
             <th>Notes</th>
         </tr>
@@ -99,7 +99,7 @@ The following table compare the features and capabilities of InfluxDB clients:
             <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
             <td><span class="icon cross" style="color:#BF3D5E;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
-            <td>Missing: Asynchronous batching, <code>consistency, precision, rp</code> options for writting, chunked query, High-level API.</td>
+            <td>Missing: <code>consistency, precision, rp</code> options for writting, asynchronous batching, chunked query, High-level API.</td>
         </tr>
         <tr>
             <td><strong><a href="https://github.com/influxdata/influxdb-php" target="_blank">PHP</a></strong></td>
@@ -132,10 +132,10 @@ The following table compare the features and capabilities of InfluxDB clients:
             <td><strong><a href="https://github.com/gossiperl/erflux" target="_blank">Erlang</a></strong></td>
             <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
             <td><span class="icon cross" style="color:#BF3D5E;"></span></td>
-            <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
             <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
             <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
-            <td></td>
+            <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
+            <td>Missing: <code>consistency, precision, rp</code> options for writting, asynchronous batching, chunked query, High-level API, Documentation.</td>
         </tr>
         <tr>
             <td><strong><a href="https://github.com/olauzon/capacitor" target="_blank">Clojure</a></strong></td>
