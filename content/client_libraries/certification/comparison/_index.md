@@ -34,6 +34,7 @@ The following table compare the features and capabilities of InfluxDB clients:
             <th>Queries</th>
             <th>High-level API</th>
             <th>Documentation</th>
+            <th>Notes</th>
         </tr>
     </thead>
     <tbody>
@@ -44,6 +45,7 @@ The following table compare the features and capabilities of InfluxDB clients:
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
             <td><span class="icon cross" style="color:#BF3D5E;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
+            <td>Missing: Asynchronous batching.</td>
         </tr>
         <tr>
             <td><strong><a href="https://github.com/influxdb/influxdb-python" target="_blank">Python</a></strong></td>
@@ -52,6 +54,7 @@ The following table compare the features and capabilities of InfluxDB clients:
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
+            <td>Missing: Asynchronous batching.</td>
         </tr>
         <tr>
             <td><strong><a href="https://github.com/influxdata/influxdb-java" target="_blank">Java</a></strong></td>
@@ -60,6 +63,7 @@ The following table compare the features and capabilities of InfluxDB clients:
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
+            <td></td>
         </tr>
         <tr>
             <td><strong><a href="https://github.com/influxdata/influxdb-ruby" target="_blank">Ruby</a></strong></td>
@@ -68,6 +72,7 @@ The following table compare the features and capabilities of InfluxDB clients:
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
+            <td>Missing: <code>Jitter Interval</code> and <code>Retry Interval</code> options for batching.</td>
         </tr>
         <tr>
             <td><strong><a href="https://github.com/node-influx/node-influx" target="_blank">Node.js</a></strong></td>
@@ -76,6 +81,7 @@ The following table compare the features and capabilities of InfluxDB clients:
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
+            <td></td>
         </tr>
         <tr>
             <td><strong><a href="https://github.com/MikaelGRA/InfluxDB.Client" target="_blank">.Net (C#)</a></strong></td>
@@ -84,6 +90,7 @@ The following table compare the features and capabilities of InfluxDB clients:
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
+            <td>Missing: Asynchronous batching.</td>
         </tr>
         <tr>
             <td><strong><a href="https://github.com/d-led/influxdb-cpp-rest" target="_blank">C++</a></strong></td>
@@ -92,6 +99,7 @@ The following table compare the features and capabilities of InfluxDB clients:
             <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
             <td><span class="icon cross" style="color:#BF3D5E;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
+            <td></td>
         </tr>
         <tr>
             <td><strong><a href="https://github.com/influxdata/influxdb-php" target="_blank">PHP</a></strong></td>
@@ -100,6 +108,7 @@ The following table compare the features and capabilities of InfluxDB clients:
             <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
+            <td>Missing: Asynchronous batching, Chunked query.</td>
         </tr>
         <tr>
             <td><strong><a href="https://github.com/paulgoldbaum/scala-influxdb-client" target="_blank">Scala</a></strong></td>
@@ -108,6 +117,7 @@ The following table compare the features and capabilities of InfluxDB clients:
             <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
+            <td>Missing: Asynchronous batching, Chunked query.</td>
         </tr>
         <tr>
             <td><strong><a href="https://github.com/maoe/influxdb-haskell" target="_blank">Haskell</a></strong></td>
@@ -116,6 +126,7 @@ The following table compare the features and capabilities of InfluxDB clients:
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
             <td><span class="icon cross" style="color:#BF3D5E;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
+            <td>Missing: Asynchronous batching.</td>
         </tr>
         <tr>
             <td><strong><a href="https://github.com/gossiperl/erflux" target="_blank">Erlang</a></strong></td>
@@ -124,6 +135,7 @@ The following table compare the features and capabilities of InfluxDB clients:
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
             <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
             <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
+            <td></td>
         </tr>
         <tr>
             <td><strong><a href="https://github.com/olauzon/capacitor" target="_blank">Clojure</a></strong></td>
@@ -132,6 +144,7 @@ The following table compare the features and capabilities of InfluxDB clients:
             <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
+            <td></td>
         </tr>
         <tr>
             <td><strong><a href="https://github.com/mmaul/cl-influxdb" target="_blank">Lisp</a></strong></td>
@@ -140,6 +153,7 @@ The following table compare the features and capabilities of InfluxDB clients:
             <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
             <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
             <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
+            <td></td>
         </tr>
         <tr>
             <td><strong><a href="https://github.com/hirose31/p5-InfluxDB" target="_blank">Perl</a></strong></td>
@@ -148,6 +162,7 @@ The following table compare the features and capabilities of InfluxDB clients:
             <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
             <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
             <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
+            <td></td>
         </tr>
     </tbody>
 </table>
