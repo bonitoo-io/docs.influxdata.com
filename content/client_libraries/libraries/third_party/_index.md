@@ -12,6 +12,7 @@ Choose a Flux client library that matches the language in which your application
 ## InfluxDB
 Choose a InfluxDB client library that matches the language in which your application is written.
 
+* [Node.js](https://github.com/node-influx/node-influx)
 * [C++](https://github.com/d-led/influxdb-cpp-rest)
 * [Erlang](https://github.com/gossiperl/erflux)
 * [Clojure](https://github.com/olauzon/capacitor)
