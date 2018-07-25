@@ -24,6 +24,6 @@ Choose a InfluxDB client library that matches the language in which your applica
 | [Python](https://github.com/influxdb/influxdb-python)                 | Asynchronous batching                                         |
 | [Ruby](https://github.com/influxdata/influxdb-ruby)                   | `Jitter Interval` and `Retry Interval` options for batching   |
 | [.Net (C#)](https://github.com/MikaelGRA/InfluxDB.Client)             | Asynchronous batching                                         |
-| [PHP](https://github.com/influxdata/influxdb-php)                     | Asynchronous batching , Chunked query                         |
-| [Scala](https://github.com/paulgoldbaum/scala-influxdb-client)        | Asynchronous batching , Chunked query                         |
-| [Haskell](https://github.com/maoe/influxdb-haskell)                   | Asynchronous batching                                         |
+| [PHP](https://github.com/influxdata/influxdb-php)                     | Asynchronous batching, Chunked query                          |
+| [Scala](https://github.com/paulgoldbaum/scala-influxdb-client)        | Asynchronous batching, Chunked query                          |
+| [Haskell](https://github.com/maoe/influxdb-haskell)                   | Asynchronous batching, High-level API                         |

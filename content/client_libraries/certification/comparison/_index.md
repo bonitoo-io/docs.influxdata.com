@@ -81,10 +81,10 @@ The following table compare the features and capabilities of InfluxDB clients:
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
-            <td></td>
+            <td>Missing: Asynchronous batching, <code>consistency</code> option for writting.</td>
         </tr>
         <tr>
-            <td><strong><a href="https://github.com/MikaelGRA/InfluxDB.Client" target="_blank">.Net (C#)</a></strong></td>
+            <td><strong><a href="https://github.com/MikaelGRA/InfluxDB.Client" target="_blank">.Net&nbsp;(C#)</a></strong></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
             <td><span class="icon cross" style="color:#BF3D5E;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
@@ -99,7 +99,7 @@ The following table compare the features and capabilities of InfluxDB clients:
             <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
             <td><span class="icon cross" style="color:#BF3D5E;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
-            <td></td>
+            <td>Missing: Asynchronous batching, <code>consistency, precision, rp</code> options for writting, chunked query, High-level API.</td>
         </tr>
         <tr>
             <td><strong><a href="https://github.com/influxdata/influxdb-php" target="_blank">PHP</a></strong></td>
@@ -108,7 +108,7 @@ The following table compare the features and capabilities of InfluxDB clients:
             <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
-            <td>Missing: Asynchronous batching, Chunked query.</td>
+            <td>Missing: Asynchronous batching, chunked query.</td>
         </tr>
         <tr>
             <td><strong><a href="https://github.com/paulgoldbaum/scala-influxdb-client" target="_blank">Scala</a></strong></td>
@@ -117,7 +117,7 @@ The following table compare the features and capabilities of InfluxDB clients:
             <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
-            <td>Missing: Asynchronous batching, Chunked query.</td>
+            <td>Missing: Asynchronous batching, chunked query.</td>
         </tr>
         <tr>
             <td><strong><a href="https://github.com/maoe/influxdb-haskell" target="_blank">Haskell</a></strong></td>
@@ -126,7 +126,7 @@ The following table compare the features and capabilities of InfluxDB clients:
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
             <td><span class="icon cross" style="color:#BF3D5E;"></span></td>
             <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
-            <td>Missing: Asynchronous batching.</td>
+            <td>Missing: Asynchronous batching, High-level API.</td>
         </tr>
         <tr>
             <td><strong><a href="https://github.com/gossiperl/erflux" target="_blank">Erlang</a></strong></td>
