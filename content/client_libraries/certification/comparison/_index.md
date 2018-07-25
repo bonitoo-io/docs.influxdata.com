@@ -162,7 +162,7 @@ The following table compare the features and capabilities of InfluxDB clients:
             <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
             <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
             <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
-            <td></td>
+            <td>Missing: <code>consistency, precision, rp</code> options for writting, asynchronous batching, options for set the chunk size, High-level API. Insufficient documentation.</td>
         </tr>
     </tbody>
 </table>
