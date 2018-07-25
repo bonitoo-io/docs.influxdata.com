@@ -148,12 +148,12 @@ The following table compare the features and capabilities of InfluxDB clients:
         </tr>
         <tr>
             <td><strong><a href="https://github.com/mmaul/cl-influxdb" target="_blank">Lisp</a></strong></td>
-            <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
+            <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
             <td><span class="icon cross" style="color:#BF3D5E;"></span></td>
+            <td><span class="icon checkmark" style="color:#32B08C;"></span></td>
             <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
             <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
-            <td><span class="icon warning" style="color:#C9D0FF;"></span></td>
-            <td></td>
+            <td>Missing: asynchronous batching. Partial support for High-level API. Insufficient documentation.</td>
         </tr>
         <tr>
             <td><strong><a href="https://github.com/hirose31/p5-InfluxDB" target="_blank">Perl</a></strong></td>
