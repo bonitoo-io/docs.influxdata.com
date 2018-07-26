@@ -54,6 +54,8 @@ Below is a list of all options that are implemented in the Flux language and MUS
     option now = () => 2006-01-02T15:04:05Z07:00
     ```
 
+The second method of `FluxClient` is `ping` method that report if service is running.
+
 Client libraries MUST be thread safe.
 
 For non-OO languages such as C, client libraries SHOULD follow the spirit of this structure as much as is practical.
@@ -69,6 +71,8 @@ class FluxClient {
     
     void flux(query, options, Async<FluxResult> callback)
     void flux(query, options, Async<HttpResponse> callback)
+    
+    boolean ping()
 }
 ```
 
