@@ -20,7 +20,7 @@ The key class is `FluxClient`. This has a method called `flux` that has a parame
 The `flux` method has to be able to map results to a language objects or return raw response from Flux server.
 The flux method has to also support callback for streamed query response.
 
-The Flux query has to be also configured by `Option`. Options specify a context in which a Flux query is to be run. 
+The Flux query has to be also configured by `Option`. [Options](https://github.com/influxdata/platform/blob/master/query/docs/SPEC.md#option-statements) specify a context in which a Flux query is to be run. 
 They define variables that describe how to execute a Flux query. 
 
 Below is a list of all options that are implemented in the Flux language and MUST be implement in libraries: 
