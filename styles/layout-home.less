@@ -131,6 +131,30 @@
 				background-color: @g20-white;
 			}
 		}
+        &.card-ClientLibraries {
+            .homepage--card-mask {
+                background-image: url(/img/home-influxdb.svg);
+                background-color: @c-ocean;
+            }
+            .homepage--card-description {
+                color: @g20-white;
+            }
+            .homepage--card-title {
+                color: @g14-chromium;
+            }
+            a.homepage--card-link:link,
+            a.homepage--card-link:active,
+            a.homepage--card-link:visited {
+                color: @g20-white;
+                transition:
+                    background-color 0.25s ease,
+                    color 0.25s ease;
+            }
+            a.homepage--card-link:hover {
+                color: @c-pool;
+                background-color: @g20-white;
+            }
+        }
 		&.card-InfluxDB {
 			.homepage--card-mask {
 				background-image: url(/img/home-influxdb.svg);

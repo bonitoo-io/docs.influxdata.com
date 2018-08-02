@@ -2,7 +2,7 @@
 title: Writing client libraries
 ---
 
-These guidelines aim to help authors of new client libraries produce good libraries. The certificated library has to fully respect guidelines mentioned below. 
+These guidelines aim to help authors of new client libraries produce good libraries. The certified library has to fully respect guidelines mentioned below. 
 
 Things to keep in mind:
 

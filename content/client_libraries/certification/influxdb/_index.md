@@ -14,58 +14,91 @@ MUST/MUST NOT/SHOULD/SHOULD NOT/MAY have the meanings given in [https://www.ietf
 * Easily use the High-level API
 
 ## The functionality
-The following description helps to understand how to write the proper client library.  
+The following description helps to understand how to write the proper client library. Client libraries MUST be thread safe.
+For non-OO languages such as C, client libraries SHOULD follow the spirit of this structure as much as is practical.
 
 ### Writes
 
-> Write measurement data points to InfluxDB. 
-
 - The client MUST provide writing data as a batch and also one by one.
-- The client SHOULD also support writing data points to InfluxDB through [UDP](/influxdb/latest/supported_protocols/udp).
+- The client SHOULD also support writing data points to InfluxDB through [UDP](/influxdb/v1.6/supported_protocols/udp).
 
-#### The batching configuration that client SHOULD support
+Below is a list of write options that MUST be implement in libraries:
 
+1. `consistency`
 
-1.  Batch Size
+    Sets the write consistency for the point. InfluxDB assumes that the write consistency is `one` if you do not specify `consistency`.
+    Available values: `any,one,quorum,all`.
+
+2. `precision`
+
+    Sets the precision for the supplied Unix time values. InfluxDB assumes that timestamps are in nanoseconds if you do not specify `precision`.
+    Available values: `ns,u,ms,s,m,h`.
+    
+3. `rp`                                             
+
+    Sets the target [retention policy](/influxdb/v1.6/concepts/glossary/#retention-policy-rp) for the write. 
+    InfluxDB writes to the `DEFAULT` retention policy if you do not specify a retention policy.
+  
+For the detail documentation of InfluxDB `/write` endpoint see [API reference documentation](/influxdb/v1.6/tools/api/#write).
+  
+### Batching
+
+The batching points together is required to achieve high throughput performance. This makes writes via the HTTP API much more performant by drastically reducing the HTTP overhead.
+The recommended batch sizes is 5,000-10,000 points, although different use cases may be better served by significantly smaller or larger batches.
+  
+The client MUST support **asynchronous** batch writing.
+  
+Below is a list of batch options that MUST be implement in libraries:
+
+1.  `Batch Size`
 
     The number of data points to collect in the one batch.  
     Default: `1000`
 
-2.  Flush Interval
+2.  `Flush Interval`
 
     The maximum number of time that the data point can be buffered before write to InfluxDB.    
     Default: `1000 ms`  
     
-3.  Jitter Interval
+3.  `Jitter Interval`
 
     The maximum number of time to increase the batch flush interval (by a random amount).  
     Default: `0 ms`  
 
-4.  Retry Interval
+4.  `Retry Interval`
 
     The number of time to retry unsuccessful write.  
     Default: `1000 ms`  
 
-5.  Buffer Limit
+5.  `Buffer Limit`
 
     The maximum number of unwritten stored points.  
-    Default: `10000`  
+    Default: `10,000`  
 
 ### Queries
 
-> Querying data from the InfluxDB.
-
 * The client MUST provide way how to map query result to language objects which respects the naming conventions of the language.
 * The client MUST provide way how to get unmodified query result.
-* The client MUST support streaming query responses - [chunking](/influxdb/latest/guides/querying_data#chunking/).
+* The client MUST support streaming query responses - [chunking](/influxdb/v1.6/guides/querying_data#chunking/).
 * The client SHOULD support asynchronous querying.
+
+Below is a list of query options that MUST be implement in libraries:
+
+1.  `epoch`
+
+    Returns epoch timestamps with the specified precision. By default, InfluxDB returns timestamps in RFC3339 format with nanosecond precision.
+    Available values: `ns,u,µ,ms,s,m,h`.
+
+2.  `chunked`
+
+    Returns points in streamed batches instead of in a single response. If set to true, InfluxDB chunks responses by series or by every `10,000` points, whichever occurs first. If set to a specific value, InfluxDB chunks responses by series or by that number of points.
+
+For the detail documentation of InfluxDB `/query` endpoint see [API reference documentation](/influxdb/v1.6/tools/api/#query).
 
 ### Connection
 
-> The configuration of the connection.
-
-* The client MUST support [authenticated connection](/influxdb/latest/administration/authentication_and_authorization/#authentication).
-* The client SHOULD support communication over [HTTPS](/influxdb/latest/administration/administration/https_setup/).
+* The client MUST support [authenticated connection](/influxdb/v1.6/administration/authentication_and_authorization/#authentication).
+* The client SHOULD support communication over [HTTPS](/influxdb/v1.6/administration/https_setup/).
 
 ### High-level API
 The High-level API is very convenient to help user simplify common task for management the InfluxDB and SHOULD be implemented by client libraries.
