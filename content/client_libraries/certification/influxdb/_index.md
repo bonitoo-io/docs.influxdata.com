@@ -22,7 +22,7 @@ For non-OO languages such as C, client libraries SHOULD follow the spirit of thi
 - The client MUST provide writing data as a batch and also one by one.
 - The client SHOULD also support writing data points to InfluxDB through [UDP](/influxdb/v1.6/supported_protocols/udp).
 
-Below is a list of write options that MUST be implement in libraries:
+Below is the list of write options that MUST be implement in libraries:
 
 1. `consistency`
 
@@ -73,7 +73,23 @@ Below is a list of batch options that MUST be implement in libraries:
 5.  `Buffer Limit`
 
     The maximum number of unwritten stored points.  
-    Default: `10,000`  
+    Default: `10,000`
+    
+### Partial writes   
+
+When writing batch of points, client provides mechanism for handling partial write errors.     
+    
+### Backpressure handling
+
+Client should automatically handle situation when flush buffer is full with following strategies:
+
+1. `ERROR` -  Signal a MissingBackpressureException and terminate the sequence.
+
+2. `DROP_OLDEST` - Drop the oldest value from the buffer.
+
+3. `DROP_LATEST` - Drop the latest value from the buffer.
+
+Client provides possibility to react on 'BackpressureEvent' with custom written listener.  
 
 ### Queries
 

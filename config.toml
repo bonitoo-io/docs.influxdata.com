@@ -59,15 +59,40 @@ SectionPagesMenu = "products"
   weight = 20
   url = "/client_libraries/certification/"
 [[menu.client_libraries]]
-  name = "Certified"
+  name = "Certified client libraries"
   identifier = "certified"
   weight = 30
   url = "/client_libraries/libraries/certified/"
   parent = "libraries"
 [[menu.client_libraries]]
-  name = "Third-party tools"
-  identifier = "third_party"
+  name = "Java Client"
+  identifier = "influxdb-java-client"
+  weight = 30
+  url = "/client_libraries/libraries/java"
+  parent = "libraries"
+[[menu.client_libraries]]
+  name = ".NET Client"
+  identifier = "influxdb-dnet-client"
   weight = 40
+  url = "/client_libraries/libraries/dnet"
+  parent = "libraries"
+[[menu.client_libraries]]
+  name = "Python Client"
+  identifier = "influxdb-python-client"
+  weight = 50
+  url = "/client_libraries/libraries/python"
+  parent = "libraries"
+[[menu.client_libraries]]
+  name = "Node.js Client"
+  identifier = "influxdb-nodejs-client"
+  weight = 60
+  url = "/client_libraries/libraries/nodejs"
+  parent = "libraries"
+
+[[menu.client_libraries]]
+  name = "Other third-party client libraries"
+  identifier = "third_party"
+  weight = 100
   url = "/client_libraries/libraries/third_party/"
   parent = "libraries"
 [[menu.client_libraries]]
@@ -83,10 +108,16 @@ SectionPagesMenu = "products"
   url = "/client_libraries/certification/influxdb/"
   parent = "certification"
 [[menu.client_libraries]]
-  name = "Client Comparison"
+  name = "Existing clients features comparison"
   identifier = "comparison"
-  weight = 70
+  weight = 110
   url = "/client_libraries/certification/comparison/"
+  parent = "libraries"
+[[menu.client_libraries]]
+  name = "Certified library features"
+  identifier = "features"
+  weight = 70
+  url = "/client_libraries/certification/features/"
   parent = "certification"
 
   # InfluxDB v1.4 Menu
