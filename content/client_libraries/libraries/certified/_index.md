@@ -17,11 +17,10 @@ All certified clients should implement all features listed in [Certified library
 * [Java](/client_libraries/java) - [influxdb-java](https://github.com/influxdata/influxdb-java)
 * [Java Reactive](https://github.com/bonitoo-io/influxdb-java-reactive) - reactive RxJava extention to [influxdb-java](https://github.com/influxdata/influxdb-java)
 
-#####  Partial certified
+##### Partial certified
 
 | Client                                                                | Missing                                                       |
 |-----------------------------------------------------------------------|---------------------------------------------------------------|
-| [Go](https://github.com/influxdata/influxdb/tree/master/client)       | Asynchronous batching                                         |
 | [Python](https://github.com/influxdb/influxdb-python)                 | Asynchronous batching                                         |
 | [Ruby](https://github.com/influxdata/influxdb-ruby)                   | `Jitter Interval` and `Retry Interval` options for batching   |
 | [.Net (C#)](https://github.com/MikaelGRA/InfluxDB.Client)             | Asynchronous batching                                         |

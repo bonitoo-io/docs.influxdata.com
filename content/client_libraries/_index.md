@@ -18,8 +18,12 @@ All certified clients should implement all features listed in [Certified library
 
 ### InfluxDB
 
-* [Go](https://github.com/influxdata/influxdb/tree/master/client) 
-* [Java/RxJava](/client_libraries/libraries/java) 
+* [Go](/client_libraries/libraries/go) 
+* [Java](/client_libraries/libraries/java)
+* [RxJava](/client_libraries/libraries/rxjava) 
+* [Scala](/client_libraries/libraries/scala) 
+* [C/C++](/client_libraries/libraries/c) 
+* [Ruby](/client_libraries/libraries/ruby) 
 * [.NET](https://.....) 
 * [Python](https://github.com/influxdb/influxdb-python) 
 * [PHP](https://github.com/influxdb/influxdb-php) 
