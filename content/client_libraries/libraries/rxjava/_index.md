@@ -2,12 +2,6 @@
 title: Reactive InfluxDB Java client library.
 ---
 
-## Source Code
-
-* [influxdb-java-reactive on Github](https://github.com/bonitoo-io/influxdb-java-reactive) - Maintained by [Bonitoo.io](https://github.com/bonitoo-io)
-    * The reactive client library is build on top of the [influxdb-java]((https://github.com/influxdata/influxdb-java)) 
-    and [RxJava](https://github.com/ReactiveX/RxJava). 
-
 # influxdb-java-reactive
 
 [![Build Status](https://img.shields.io/circleci/project/github/bonitoo-io/influxdb-java-reactive/master.svg)](https://circleci.com/gh/bonitoo-io/workflows/influxdb-java-reactive/tree/master)
@@ -20,6 +14,12 @@ title: Reactive InfluxDB Java client library.
 This is the Java Reactive Client library for the InfluxDB.
 
 The reactive client library is based on the RxJava. It's support all features from the [influxdb-java - core library](https://github.com/influxdata/influxdb-java/) in the reactive way.
+
+### Source Code
+
+* [influxdb-java-reactive on Github](https://github.com/bonitoo-io/influxdb-java-reactive) - Maintained by [Bonitoo.io](https://github.com/bonitoo-io)
+    * The reactive client library is build on top of the [influxdb-java]((https://github.com/influxdata/influxdb-java)) 
+    and [RxJava](https://github.com/ReactiveX/RxJava). 
 
 ## Usage
 

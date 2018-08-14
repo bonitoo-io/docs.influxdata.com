@@ -1,14 +1,6 @@
 ---
-title: InfluxDB Java client library.
+title: InfluxDB Java client library
 ---
-
-## Source Code
-
-* [influxdb-java on GitHub](https://github.com/influxdata/influxdb-java) - Maintained by [@majst01](https://github.com/majst01)
-
-## Requirements
-* Java 1.8+ (tested with jdk8 and jdk9)
-* InfluxDB 0.9 and later
 
 influxdb-java
 =============
@@ -17,14 +9,22 @@ influxdb-java
 [![codecov.io](http://codecov.io/github/influxdata/influxdb-java/coverage.svg?branch=master)](http://codecov.io/github/influxdata/influxdb-java?branch=master)
 [![Issue Count](https://codeclimate.com/github/influxdata/influxdb-java/badges/issue_count.svg)](https://codeclimate.com/github/influxdata/influxdb-java)
 
-This is the Java Client library which is only compatible with InfluxDB 0.9 and higher. Maintained by [@majst01](https://github.com/majst01).
+This is the Java Client library which is compatible with InfluxDB 0.9 and higher. Maintained by [@majst01](https://github.com/majst01).
 
 To connect to InfluxDB 0.8.x you need to use influxdb-java version 1.6.
 
 This implementation is meant as a Java rewrite of the influxdb-go package.
 All low level REST Api calls are available.
 
-## Usage
+### Source Code
+
+* [influxdb-java on GitHub](https://github.com/influxdata/influxdb-java) - Maintained by [@majst01](https://github.com/majst01)
+
+### Requirements
+* Java 1.8+ (tested with jdk8 and jdk9)
+* InfluxDB 0.9 and later
+
+## Getting started
 
 ### Add influxdb-java to your project
 
