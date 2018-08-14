@@ -10,14 +10,13 @@ to ensure consistency in naming and functionality across all languages and platf
 
 All certified clients should implement all features listed in [Certified library features](client_libraries/certification/features/).
 
-#### InfluxDB 1.X
+#### Fully certified InfluxDB 1.x clients 
 
-##### Fully certified
 * [Go](https://github.com/influxdata/influxdb/tree/master/client) 
 * [Java](/client_libraries/java) - [influxdb-java](https://github.com/influxdata/influxdb-java)
 * [Java Reactive](https://github.com/bonitoo-io/influxdb-java-reactive) - reactive RxJava extention to [influxdb-java](https://github.com/influxdata/influxdb-java)
 
-##### Partial certified
+#### Partially certified 1.x clients
 
 | Client                                                                | Missing                                                       |
 |-----------------------------------------------------------------------|---------------------------------------------------------------|
@@ -29,6 +28,7 @@ All certified clients should implement all features listed in [Certified library
 | [Haskell](https://github.com/maoe/influxdb-haskell)                   | Asynchronous batching, High-level API                         |
 
 #### Flux (InfluxDB 2.0)
+
 * [Go](/client_libraries/java) - [influxdb-java](https://github.com/influxdata/influxdb-java)
 * [Java](https://github.com/bonitoo-io/flux-java) 
 * [Java Reactive](https://github.com/bonitoo-io/influxdb-java-reactive) - reactive RxJava extention to [flux-java](https://github.com/influxdata/influxdb-java) 

@@ -13,7 +13,6 @@ MUST/MUST NOT/SHOULD/SHOULD NOT/MAY have the meanings given in [https://www.ietf
 * Query data and mapping result to a language objects
 * Easily use the High-level API
 
-## The functionality
 The following description helps to understand how to write the proper client library. Client libraries MUST be thread safe.
 For non-OO languages such as C, client libraries SHOULD follow the spirit of this structure as much as is practical.
 
