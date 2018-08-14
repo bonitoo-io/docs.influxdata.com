@@ -95,6 +95,12 @@ SectionPagesMenu = "products"
     url = "/client_libraries/libraries/go"
     parent = "libraries"
 [[menu.client_libraries]]
+    name = "C++"
+    identifier = "influxdb-c-client"
+    weight = 63
+    url = "/client_libraries/libraries/c"
+    parent = "libraries"
+[[menu.client_libraries]]
     name = "Kotlin"
     identifier = "influxdb-kotlin-client"
     weight = 65
