@@ -1,5 +1,5 @@
 ---
-title: The official InfluxDB Java client library.
+title: Reactive InfluxDB Java client library.
 ---
 
 ## Source Code
