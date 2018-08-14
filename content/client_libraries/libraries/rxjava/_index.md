@@ -41,7 +41,7 @@ dependencies {
 }
 ```
 
-### Factory
+### Getting started
 
 The `InfluxDBReactiveFactory` creates the reactive instance of a InfluxDB client. 
 The `InfluxDBReactive` client can be configured by two parameters:
@@ -66,6 +66,7 @@ InfluxDBReactive influxDBReactive = InfluxDBReactiveFactory.connect(options);
 influxDBReactive.close();
 ```
 ### Events
+
 The `InfluxDBReactive` produces events that allow user to be notified and react to this events:
 
 - `WriteSuccessEvent` - published when arrived the success response from InfluxDB server
