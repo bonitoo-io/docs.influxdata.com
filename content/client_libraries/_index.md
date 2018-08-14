@@ -18,16 +18,16 @@ All certified clients should implement all features listed in [Certified library
 
 ### InfluxDB
 
-* [Go](/client_libraries/libraries/go) 
 * [Java](/client_libraries/libraries/java)
 * [RxJava](/client_libraries/libraries/rxjava) 
+* [Javascript & Node.js](https://github.com/node-influx/node-influx)
+* [Go](/client_libraries/libraries/go) 
 * [Scala](/client_libraries/libraries/scala) 
 * [C/C++](/client_libraries/libraries/c) 
 * [Ruby](/client_libraries/libraries/ruby) 
 * [.NET](https://.....) 
 * [Python](https://github.com/influxdb/influxdb-python) 
 * [PHP](https://github.com/influxdb/influxdb-php) 
-* [Node.js](https://github.com/node-influx/node-influx)
 
 Developers that create or maintain client library should follow [InfluxDB Client Guideline](/client_libraries/certification/influxdb/)
 to ensure consistency in naming and functionality across all languages and platforms.
@@ -40,7 +40,7 @@ to ensure consistency in naming and functionality across all languages and platf
 Developers that create or maintain Flux library should follow [Flux Client Guideline](/client_libraries/certification/flux/)
 to ensure consistency in naming and functionality across all languages and platforms.
 
-## The third-party unsupported client libraries
+## The third-party client libraries
 
 InfluxDB client libraries are developed by the open source community and are not directly supported by InfluxData. 
 These client libraries support the InfluxDB API and should be fully compatible with InfluxDB version 1.5. 
