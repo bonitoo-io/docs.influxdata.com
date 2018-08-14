@@ -79,7 +79,7 @@ The `InfluxDBReactive` produces events that allow user to be notified and react 
 
 #### Examples
 
-##### Handle the Success write
+##### Handle successful write
 ```java
 InfluxDBReactive influxDBReactive = InfluxDBReactiveFactory.connect(options);
 
@@ -91,7 +91,7 @@ influxDBReactive.listenEvents(WriteSuccessEvent.class).subscribe(event -> {
     ...
 });
 ```
-##### Handle the Error Write
+##### Handle failed write
 ```java
 InfluxDBReactive influxDBReactive = InfluxDBReactiveFactory.connect(options);
 
