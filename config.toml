@@ -70,10 +70,16 @@ SectionPagesMenu = "products"
   url = "/client_libraries/libraries/certified/"
   parent = "certification"
 [[menu.client_libraries]]
-  name = "Java & RxJava"
+  name = "Java"
   identifier = "influxdb-java-client"
   weight = 10
-  url = "/client_libraries/libraries/java"
+  url = "/client_libraries/libraries/java/"
+  parent = "libraries"
+[[menu.client_libraries]]
+  name = "RxJava"
+  identifier = "influxdb-rxjava-client"
+  weight = 10
+  url = "/client_libraries/libraries/rxjava/"
   parent = "libraries"
 [[menu.client_libraries]]
   name = "Node.js"

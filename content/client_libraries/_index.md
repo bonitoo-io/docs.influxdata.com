@@ -1,5 +1,6 @@
 ---
 title: Client Libraries
+type: client_libraries
 ---
 
 # Overview
