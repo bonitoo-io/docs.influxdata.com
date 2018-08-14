@@ -10,34 +10,6 @@ title: InfluxDB Java client library.
 * Java 1.8+ (tested with jdk8 and jdk9)
 * InfluxDB 0.9 and later
 
-## Client feature matrix 
-
-**System requirements** | Status | Note
---------|-------|---
-[autentication username/password](/client_libraries/certification/influxdb/#connection) | Y 
-[secure connection HTTPS](/client_libraries/certification/influxdb/#connection) |  Y
-[thread-safe](/client_libraries/certification/influxdb/#the-functionality) | Y
-[http connection pooling](/client_libraries/certification/influxdb/#connection) | Y 
-[application/x-msgpack encoding support](/client_libraries/certification/influxdb/#messagepack) | Y | 
-[backpressure handling](/client_libraries/certification/influxdb/#backpressure-handling) | N | supported in [RxJava Client](/client_libraries/libraries/rxjava)
-[write UDP](/client_libraries/certification/influxdb/#writes) |  Y 
-**Functional requirements**| 
-[_Query_](/client_libraries/certification/influxdb/#queries)  | 
-[query - async support](/client_libraries/certification/influxdb/#queries)  | Y
-[query - chunking large responses](/client_libraries/certification/influxdb/#queries) | Y
-[query - to object (Pojo/POCO)](/client_libraries/certification/influxdb/#queries) | N | supported in [RxJava Client](/client_libraries/libraries/rxjava)
-[query - query builder](/client_libraries/certification/influxdb/#queries) | N
-[query - automatic tag sorting optimalization](/client_libraries/certification/influxdb/#queries) | Y 
-[_Write_](/client_libraries/certification/influxdb/#writes) |  
-[write - async support](/client_libraries/certification/influxdb/#writes)  | Y 
-[write - option retention policy](/client_libraries/certification/influxdb/#writes) | Y
-[write - option consistency level](/client_libraries/certification/influxdb/#writes) | Y
-[write - option precision](/client_libraries/certification/influxdb/#writes) | Y
-[write - object (Pojo/POCO)]((/client_libraries/certification/influxdb/#writes)) |  Y
-[write - batching](/client_libraries/certification/influxdb/#batching) | Y
-[write - partial write handling](/client_libraries/certification/influxdb/#partial-writes) | Y 
-[write - flush interval jittering](/client_libraries/certification/influxdb/#batching) | Y  
-
 influxdb-java
 =============
 
@@ -53,6 +25,23 @@ This implementation is meant as a Java rewrite of the influxdb-go package.
 All low level REST Api calls are available.
 
 ## Usage
+
+### Add influxdb-java to your project
+
+The latest version for maven dependence:
+```xml
+<dependency>
+  <groupId>org.influxdb</groupId>
+  <artifactId>influxdb-java</artifactId>
+  <version>2.10</version>
+</dependency>
+```
+Or when using with gradle:
+```groovy
+compile 'org.influxdb:influxdb-java:2.10'
+```
+For version change history have a look at [ChangeLog](https://github.com/influxdata/influxdb-java/blob/master/CHANGELOG.md).
+
 
 ### Basic Usage:
  
@@ -192,6 +181,36 @@ influxDB.query(query);
 influxDB.dropRetentionPolicy(rpName, dbName);
 influxDB.deleteDatabase(dbName);
 ```
+
+
+## Client feature matrix 
+
+**System requirements** | Status | Note
+--------|-------|---
+[autentication username/password](/client_libraries/certification/influxdb/#connection) | Y 
+[secure connection HTTPS](/client_libraries/certification/influxdb/#connection) |  Y
+[thread-safe](/client_libraries/certification/influxdb/#the-functionality) | Y
+[http connection pooling](/client_libraries/certification/influxdb/#connection) | Y 
+[application/x-msgpack encoding support](/client_libraries/certification/influxdb/#messagepack) | Y | 
+[backpressure handling](/client_libraries/certification/influxdb/#backpressure-handling) | N | supported in [RxJava Client](/client_libraries/libraries/rxjava)
+[write UDP](/client_libraries/certification/influxdb/#writes) |  Y 
+**Functional requirements**| 
+[_Query_](/client_libraries/certification/influxdb/#queries)  | 
+[query - async support](/client_libraries/certification/influxdb/#queries)  | Y
+[query - chunking large responses](/client_libraries/certification/influxdb/#queries) | Y
+[query - to object (Pojo/POCO)](/client_libraries/certification/influxdb/#queries) | N | supported in [RxJava Client](/client_libraries/libraries/rxjava)
+[query - query builder](/client_libraries/certification/influxdb/#queries) | N
+[query - automatic tag sorting optimalization](/client_libraries/certification/influxdb/#queries) | Y 
+[_Write_](/client_libraries/certification/influxdb/#writes) |  
+[write - async support](/client_libraries/certification/influxdb/#writes)  | Y 
+[write - option retention policy](/client_libraries/certification/influxdb/#writes) | Y
+[write - option consistency level](/client_libraries/certification/influxdb/#writes) | Y
+[write - option precision](/client_libraries/certification/influxdb/#writes) | Y
+[write - object (Pojo/POCO)]((/client_libraries/certification/influxdb/#writes)) |  Y
+[write - batching](/client_libraries/certification/influxdb/#batching) | Y
+[write - partial write handling](/client_libraries/certification/influxdb/#partial-writes) | Y 
+[write - flush interval jittering](/client_libraries/certification/influxdb/#batching) | Y  
+
 
 ### Advanced Usage:
 
@@ -335,23 +354,6 @@ influxDB.enableBatch(BatchOptions.DEFAULTS.jitterDuration(500);
 
 ### Other Usages:
 For additional usage examples have a look at [InfluxDBTest.java](https://github.com/influxdb/influxdb-java/blob/master/src/test/java/org/influxdb/InfluxDBTest.java "InfluxDBTest.java")
-
-## Version
-
-The latest version for maven dependence:
-```xml
-<dependency>
-  <groupId>org.influxdb</groupId>
-  <artifactId>influxdb-java</artifactId>
-  <version>2.10</version>
-</dependency>
-```
-Or when using with gradle:
-```groovy
-compile 'org.influxdb:influxdb-java:2.10'
-```
-For version change history have a look at [ChangeLog](https://github.com/influxdata/influxdb-java/blob/master/CHANGELOG.md).
-
 
 ### Build Requirements
 

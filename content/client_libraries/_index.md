@@ -19,6 +19,8 @@ All certified clients should implement all features listed in [Certified library
 
 ### InfluxDB
 
+Here is the list of InfluxDB clients for common programming languages:
+
 * [Java](/client_libraries/libraries/java)
 * [RxJava](/client_libraries/libraries/rxjava) 
 * [Javascript & Node.js](https://github.com/node-influx/node-influx)
@@ -41,19 +43,17 @@ to ensure consistency in naming and functionality across all languages and platf
 Developers that create or maintain Flux library should follow [Flux Client Guideline](/client_libraries/certification/flux/)
 to ensure consistency in naming and functionality across all languages and platforms.
 
-## The third-party client libraries
+## Third-party client libraries
 
 InfluxDB client libraries are developed by the open source community and are not directly supported by InfluxData. 
 These client libraries support the InfluxDB API and should be fully compatible with InfluxDB version 1.5. 
  
 Brief list of third-party client libraries:
-   
-### InfluxDB
 
 * [Elixir instream](https://github.com/mneudert/instream)
 * [Haskell influxdb-haskell](https://github.com/maoe/influxdb-haskell)
-* [Lisp CL-INFLUXDB](https://github.com/mmaul/cl-influxdb),
-* [MATLAB influxdb-matlab](https://github.com/EnricSala/influxdb-matlab),
+* [Lisp CL-INFLUXDB](https://github.com/mmaul/cl-influxdb)
+* [MATLAB influxdb-matlab](https://github.com/EnricSala/influxdb-matlab)
 * [R influxdbr](https://cran.r-project.org/web/packages/influxdbr/)
 * [.Net (InfluxDB.Client.Net](https://github.com/AdysTech/InfluxDB.Client.Net)
 * [.Net (InfluxData.Net](https://github.com/pootzko/InfluxData.Net)
