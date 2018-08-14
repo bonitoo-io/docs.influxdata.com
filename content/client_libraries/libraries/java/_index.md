@@ -43,7 +43,7 @@ compile 'org.influxdb:influxdb-java:2.10'
 For version change history have a look at [ChangeLog](https://github.com/influxdata/influxdb-java/blob/master/CHANGELOG.md).
 
 
-### Basic Usage:
+### Basic Usage
  
 This is a recommended approach to write data points into InfluxDB. The influxdb-java 
 client is storing your writes into an internal buffer and flushes them asynchronously 
@@ -212,7 +212,7 @@ influxDB.deleteDatabase(dbName);
 [write - flush interval jittering](/client_libraries/certification/influxdb/#batching) | Y  
 
 
-### Advanced Usage:
+### Advanced Usage
 
 #### Gzip's support (version 2.5+ required):
 
@@ -352,7 +352,8 @@ the clients will flush their buffers in different intervals:
 influxDB.enableBatch(BatchOptions.DEFAULTS.jitterDuration(500);
 ```
 
-### Other Usages:
+### Other 
+
 For additional usage examples have a look at [InfluxDBTest.java](https://github.com/influxdb/influxdb-java/blob/master/src/test/java/org/influxdb/InfluxDBTest.java "InfluxDBTest.java")
 
 ### Build Requirements

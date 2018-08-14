@@ -8,34 +8,6 @@ title: Reactive InfluxDB Java client library.
     * The reactive client library is build on top of the [influxdb-java]((https://github.com/influxdata/influxdb-java)) 
     and [RxJava](https://github.com/ReactiveX/RxJava). 
 
-## Client feature matrix 
-
-**System requirements** | Status | Note
---------|-------|---
-[autentication username/password](/client_libraries/certification/influxdb/#connection) | Y 
-[secure connection HTTPS](/client_libraries/certification/influxdb/#connection) |  Y
-[thread-safe](/client_libraries/certification/influxdb/#the-functionality) | Y
-[http connection pooling](/client_libraries/certification/influxdb/#connection) | Y 
-[application/x-msgpack encoding support](/client_libraries/certification/influxdb/#messagepack) | Y | 
-[backpressure handling](/client_libraries/certification/influxdb/#backpressure-handling) | Y |
-[write UDP](/client_libraries/certification/influxdb/#writes) |  Y 
-**Functional requirements**| 
-[_Query_](/client_libraries/certification/influxdb/#queries)  | Y
-[query - async support](/client_libraries/certification/influxdb/#queries)  | Y
-[query - chunking large responses](/client_libraries/certification/influxdb/#queries) | Y
-[query - to object (Pojo/POCO)](/client_libraries/certification/influxdb/#queries) | Y | 
-[query - query builder](/client_libraries/certification/influxdb/#queries) | N
-[query - automatic tag sorting optimalization](/client_libraries/certification/influxdb/#queries) | Y 
-[_Write_](/client_libraries/certification/influxdb/#writes) |  Y
-[write - async support](/client_libraries/certification/influxdb/#writes)  | Y 
-[write - option retention policy](/client_libraries/certification/influxdb/#writes) | Y
-[write - option consistency level](/client_libraries/certification/influxdb/#writes) | Y
-[write - option precision](/client_libraries/certification/influxdb/#writes) | Y
-[write - object (Pojo/POCO)]((/client_libraries/certification/influxdb/#writes)) |  Y
-[write - batching](/client_libraries/certification/influxdb/#batching) | Y
-[write - partial write handling](/client_libraries/certification/influxdb/#partial-writes) | Y 
-[write - flush interval jittering](/client_libraries/certification/influxdb/#batching) | Y  
-
 # influxdb-java-reactive
 
 [![Build Status](https://img.shields.io/circleci/project/github/bonitoo-io/influxdb-java-reactive/master.svg)](https://circleci.com/gh/bonitoo-io/workflows/influxdb-java-reactive/tree/master)
@@ -50,6 +22,24 @@ This is the Java Reactive Client library for the InfluxDB.
 The reactive client library is based on the RxJava. It's support all features from the [influxdb-java - core library](https://github.com/influxdata/influxdb-java/) in the reactive way.
 
 ## Usage
+
+### Add influxdb-java-reactive to your project
+
+The latest version for Maven dependency:
+```xml
+<dependency>
+  <groupId>io.bonitoo.influxdb</groupId>
+  <artifactId>influxdb-java-reactive</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+</dependency>
+```
+  
+Or when using with Gradle:
+```groovy
+dependencies {
+    compile "io.bonitoo.influxdb:influxdb-java-reactive:1.0.0-SNAPSHOT"
+}
+```
 
 ### Factory
 
@@ -220,7 +210,35 @@ influxDBReactive.listenEvents(BackpressureEvent.class).subscribe(event -> {
 });
 ```
 
-#### Examples
+## Client feature matrix 
+
+**System requirements** | Status | Note
+--------|-------|---
+[autentication username/password](/client_libraries/certification/influxdb/#connection) | Y 
+[secure connection HTTPS](/client_libraries/certification/influxdb/#connection) |  Y
+[thread-safe](/client_libraries/certification/influxdb/#the-functionality) | Y
+[http connection pooling](/client_libraries/certification/influxdb/#connection) | Y 
+[application/x-msgpack encoding support](/client_libraries/certification/influxdb/#messagepack) | Y | 
+[backpressure handling](/client_libraries/certification/influxdb/#backpressure-handling) | Y |
+[write UDP](/client_libraries/certification/influxdb/#writes) |  Y 
+**Functional requirements**| 
+[_Query_](/client_libraries/certification/influxdb/#queries)  | Y
+[query - async support](/client_libraries/certification/influxdb/#queries)  | Y
+[query - chunking large responses](/client_libraries/certification/influxdb/#queries) | Y
+[query - to object (Pojo/POCO)](/client_libraries/certification/influxdb/#queries) | Y | 
+[query - query builder](/client_libraries/certification/influxdb/#queries) | N
+[query - automatic tag sorting optimalization](/client_libraries/certification/influxdb/#queries) | Y 
+[_Write_](/client_libraries/certification/influxdb/#writes) |  Y
+[write - async support](/client_libraries/certification/influxdb/#writes)  | Y 
+[write - option retention policy](/client_libraries/certification/influxdb/#writes) | Y
+[write - option consistency level](/client_libraries/certification/influxdb/#writes) | Y
+[write - option precision](/client_libraries/certification/influxdb/#writes) | Y
+[write - object (Pojo/POCO)]((/client_libraries/certification/influxdb/#writes)) |  Y
+[write - batching](/client_libraries/certification/influxdb/#batching) | Y
+[write - partial write handling](/client_libraries/certification/influxdb/#partial-writes) | Y 
+[write - flush interval jittering](/client_libraries/certification/influxdb/#batching) | Y  
+
+#### More Examples
 
 ##### Write POJO
 ```java
@@ -362,24 +380,6 @@ influxDBReactive
 influxDBReactive
     .version()
     .subscribe(version -> System.out.println("InfluxDB version: " + version));
-```
-
-## Version
-
-The latest version for Maven dependency:
-```xml
-<dependency>
-  <groupId>io.bonitoo.influxdb</groupId>
-  <artifactId>influxdb-java-reactive</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
-</dependency>
-```
-  
-Or when using with Gradle:
-```groovy
-dependencies {
-    compile "io.bonitoo.influxdb:influxdb-java-reactive:1.0.0-SNAPSHOT"
-}
 ```
 
 ### Snapshot repository
