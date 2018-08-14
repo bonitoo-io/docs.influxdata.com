@@ -59,67 +59,71 @@ SectionPagesMenu = "products"
   weight = 20
   url = "/client_libraries/certification/"
 [[menu.client_libraries]]
-  name = "Certified client libraries"
+  name = "List of certified client libraries"
   identifier = "certified"
-  weight = 10
+  weight = 100
   url = "/client_libraries/libraries/certified/"
-  parent = "libraries"
+  parent = "certification"
 [[menu.client_libraries]]
-    name = "Go Client"
-    identifier = "influxdb-go-client"
-    weight = 25
-    url = "/client_libraries/libraries/go"
-    parent = "libraries"
-[[menu.client_libraries]]
-  name = "Java Client"
+  name = "Java client library"
   identifier = "influxdb-java-client"
-  weight = 30
+  weight = 10
   url = "/client_libraries/libraries/java"
   parent = "libraries"
 [[menu.client_libraries]]
-  name = "  RxJava Client"
+  name = "  RxJava client library"
   identifier = "influxdb-java-reactive"
-  weight = 40
+  weight = 20
   url = "/client_libraries/libraries/rxjava"
   parent = "libraries"
 [[menu.client_libraries]]
-  name = "  Scala Client"
-  identifier = "influxdb-scala"
-  weight = 45
-  url = "/client_libraries/libraries/scala"
-  parent = "libraries"
-
-[[menu.client_libraries]]
-  name = ".NET Client"
-  identifier = "influxdb-dnet-client"
-  weight = 50
-  url = "/client_libraries/libraries/dnet"
+  name = "Node.js client library"
+  identifier = "influxdb-nodejs-client"
+  weight = 30
+  url = "/client_libraries/libraries/nodejs"
   parent = "libraries"
 [[menu.client_libraries]]
-  name = "Python Client"
+  name = "Javascript & browser client library"
+  identifier = "influxdb-browser-client"
+  weight = 40
+  url = "/client_libraries/libraries/browser"
+  parent = "libraries"
+[[menu.client_libraries]]
+  name = "Python client library"
   identifier = "influxdb-python-client"
-  weight = 60
+  weight = 50
   url = "/client_libraries/libraries/python"
   parent = "libraries"
 [[menu.client_libraries]]
-  name = "Node.js Client"
-  identifier = "influxdb-nodejs-client"
+    name = "Go client library"
+    identifier = "influxdb-go-client"
+    weight = 60
+    url = "/client_libraries/libraries/go"
+    parent = "libraries"
+[[menu.client_libraries]]
+    name = "Kotlin client library"
+    identifier = "influxdb-kotlin-client"
+    weight = 65
+    url = "/client_libraries/libraries/kotlin"
+    parent = "libraries"
+[[menu.client_libraries]]
+  name = "Scala client library"
+  identifier = "influxdb-scala"
   weight = 70
-  url = "/client_libraries/libraries/nodejs"
+  url = "/client_libraries/libraries/scala"
   parent = "libraries"
 [[menu.client_libraries]]
-  name = "Node.js Client"
-  identifier = "influxdb-nodejs-client"
+  name = ".NET client library"
+  identifier = "influxdb-dnet-client"
   weight = 80
-  url = "/client_libraries/libraries/nodejs"
+  url = "/client_libraries/libraries/dnet"
   parent = "libraries"
 [[menu.client_libraries]]
-  name = "Ruby Client"
+  name = "Ruby client library"
   identifier = "influxdb-ruby-client"
   weight = 85
   url = "/client_libraries/libraries/ruby"
   parent = "libraries"
-
 [[menu.client_libraries]]
   name = "Other third-party client libraries"
   identifier = "third_party"
