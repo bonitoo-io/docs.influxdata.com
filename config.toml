@@ -54,6 +54,11 @@ SectionPagesMenu = "products"
   weight = 10
   url = "/client_libraries/libraries/"
 [[menu.client_libraries]]
+  name = "Integration with other data sources"
+  identifier = "datasources"
+  weight = 10
+  url = "/client_libraries/nifi/"
+[[menu.client_libraries]]
   name = "Writing client libraries"
   identifier = "certification"
   weight = 20
@@ -154,6 +159,30 @@ SectionPagesMenu = "products"
   weight = 70
   url = "/client_libraries/certification/features/"
   parent = "certification"
+[[menu.client_libraries]]
+  name = "Apache NiFi"
+  identifier = "nifi"
+  weight = 10
+  url = "/client_libraries/datasources/nifi/"
+  parent = "datasources"
+[[menu.client_libraries]]
+  name = "SQL Databases / JDBC"
+  identifier = "sql"
+  weight = 10
+  url = "/client_libraries/datasources/sql/"
+  parent = "datasources"
+[[menu.client_libraries]]
+  name = "MongoDB"
+  identifier = "mongo"
+  weight = 20
+  url = "/client_libraries/datasources/mongo/"
+  parent = "datasources"
+[[menu.client_libraries]]
+  name = "JMS/Kafka"
+  identifier = "jms"
+  weight = 20
+  url = "/client_libraries/datasources/jms/"
+  parent = "datasources"
 
   # InfluxDB v1.4 Menu
   [[menu.influxdb_1_4]]
