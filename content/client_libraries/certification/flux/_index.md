@@ -34,7 +34,6 @@ Below is a list of all options that are implemented in the Flux language and MUS
     * `cron`: cron is a more sophisticated way to schedule. every and cron are mutually exclusive
     * `retry`: number of times to retry a failed query
   
-  
     ```javascript
     option task = {
         name: "foo",
@@ -52,6 +51,19 @@ Below is a list of all options that are implemented in the Flux language and MUS
     ```javascript
     // Query should execute as if the below time is the current system time
     option now = () => 2006-01-02T15:04:05Z07:00
+    ```
+    
+3. `Location`
+
+    The location option is used to set the default time zone of all times in the script. The location maps the UTC offset in use at that location for a given time. 
+    The default value is set using the time zone of the running process.
+    
+    ```javascript
+    // set timezone to be 5 hours west of UTC
+    option location = fixedZone(offset:-5h)
+    
+    // set location to be America/Denver
+    option location = loadLocation(name:"America/Denver")
     ```
 
 The second method of `FluxClient` is `ping` method that report if service is running.
@@ -76,11 +88,15 @@ class FluxClient {
 }
 ```
 
+#### Referential data model
+
 **The `FluxOptions` code structure**
+
 ```go
 struct FluxOptions {
     
     Task task
+    Location location
     Time now
 }
 
@@ -92,10 +108,15 @@ struct Task {
     String cron
     Int retry
 }
+
+struct Location {
+    String timeZone
+    Int offset
+}
 ```
 
 **The `FluxResult` code structure**
-```go
+```typescript
 struct FluxResult {
     
     List<Table> tables
