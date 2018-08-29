@@ -54,14 +54,35 @@ SectionPagesMenu = "products"
   weight = 10
   url = "/client_libraries/libraries/"
 [[menu.client_libraries]]
+  name = "Flux client libraries"
+  identifier = "flux_libraries"
+  weight = 20
+  url = "/client_libraries/flux_libraries/"
+
+[[menu.client_libraries]]
+  name = "Java"
+  parent = "flux_libraries"
+  identifier = "flux_java"
+  weight = 10
+  url = "/client_libraries/flux_libraries/flux_java"
+
+[[menu.client_libraries]]
+  name = "RxJava"
+  parent = "flux_libraries"
+  identifier = "flux_rxjava"
+  weight = 20
+  url = "/client_libraries/flux_libraries/flux_rxjava"
+
+
+[[menu.client_libraries]]
   name = "Integration with other data sources"
   identifier = "datasources"
-  weight = 10
+  weight = 30
   url = "/client_libraries/nifi/"
 [[menu.client_libraries]]
   name = "Writing client libraries"
   identifier = "certification"
-  weight = 20
+  weight = 40
   url = "/client_libraries/certification/"
 [[menu.client_libraries]]
   name = "List of certified client libraries"
@@ -105,12 +126,12 @@ SectionPagesMenu = "products"
     weight = 60
     url = "/client_libraries/libraries/go"
     parent = "libraries"
-[[menu.client_libraries]]
-    name = "C++"
-    identifier = "influxdb-c-client"
-    weight = 63
-    url = "/client_libraries/libraries/c"
-    parent = "libraries"
+#[[menu.client_libraries]]
+#    name = "C++"
+#    identifier = "influxdb-c-client"
+#    weight = 63
+#    url = "/client_libraries/libraries/c"
+#    parent = "libraries"
 [[menu.client_libraries]]
     name = "Kotlin"
     identifier = "influxdb-kotlin-client"
