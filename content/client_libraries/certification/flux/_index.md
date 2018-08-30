@@ -7,12 +7,12 @@ This document covers what functionality the Flux client libraries should offer, 
 
 MUST/MUST NOT/SHOULD/SHOULD NOT/MAY have the meanings given in [https://www.ietf.org/rfc/rfc2119.txt](https://www.ietf.org/rfc/rfc2119.txt).
 
-#### The common use cases are:
+### The common use cases are:
 
 * Query data and mapping result to a language objects or a raw response.
 * ...
 
-#### Overall structure
+### Overall structure
 
 Clients SHOULD generally follow the structure described here. 
 
@@ -72,7 +72,20 @@ Client libraries MUST be thread safe.
 
 For non-OO languages such as C, client libraries SHOULD follow the spirit of this structure as much as is practical.
 
-#### Code structure
+### Tests
+Client libraries SHOULD have tests that covering the whole functionality.
+
+### Naming
+
+Client libraries SHOULD follow function/method/class names mentioned in this document, keeping in mind the naming conventions of the language they’re working in.
+
+Libraries MUST NOT offer functions/methods/classes with the same or similar names to ones given here, but with different semantics.
+
+>
+> NOTE: For the codes snippet are used [Kotlin Programming Language](https://kotlinlang.org/docs/reference/data-classes.html)
+>
+
+### Code structure
 
 **The `FluxClient` code structure**
 ```java
@@ -88,68 +101,132 @@ class FluxClient {
 }
 ```
 
-#### Referential data model
+### Referential data model
 
-**The `FluxOptions` code structure**
+The data model for the flux consists of tables, records, columns and streams.
 
-```go
-struct FluxOptions {
+#### FluxTable
+
+A table is set of records, with a common set of columns and a group key.
+
+The group key is a list of columns. A table's group key denotes which subset of the entire dataset is assigned to the table. As such, all records within a table will have the same values for each column that is part of the group key. These common values are referred to as the group key value, and can be represented as a set of key value pairs.
+
+A tables schema consists of its group key, and its column's labels and types.
+
+```kotlin
+data class FluxTable (
+
+    /**
+     * Table column's labels and types.
+     */
+    val columns: List<FluxColumn>,
+
+    /**
+     * A table's group key is subset of the entire columns dataset that assigned to the table.
+     * As such, all records within a table will have the same values for each column that is part of the group key.
+     */
+    val groupKey: List<FluxColumn>,
     
-    Task task
-    Location location
-    Time now
-}
+    /**
+     * Table records.
+     */
+    val records: List<FluxRecord>
+)
+```
 
-struct Task {
-    
-    String name
-    Duration every
-    Duration delay
-    String cron
-    Int retry
-}
+**Client library implementations:**
 
-struct Location {
-    String timeZone
-    Int offset
+* [Java](https://github.com/bonitoo-io/flux-java/blob/master/src/main/java/io/bonitoo/flux/dto/FluxTable.java)
+
+#### FluxColumn
+
+A column has a label and a data type.
+
+The available data types for a column are:
+
+| Name      |   Description                             |
+|-----------|-------------------------------------------|
+| bool      | a boolean value, true or false            |
+| uint      | an unsigned 64-bit integer                |
+| int       | a signed 64-bit integer                   |
+| float     | an IEEE-754 64-bit floating-point number  |
+| string    | a sequence of unicode characters          |
+| bytes     | a sequence of byte values                 |
+| time      | a nanosecond precision instant in time    |
+| duration  | a nanosecond precision duration of time   |
+
+```kotlin
+data class FluxColumn (
+
+    /**
+     * Column index in record.
+     */
+    var index: Int,
+
+    /**
+     * The label of column (e.g., "_start", "_stop", "_time").
+     */
+    var label: String,
+
+    /**
+     * The data type of column (e.g., "string", "long", "dateTime:RFC3339").
+     */
+    var dataType: String,
+
+    /**
+     * Boolean flag indicating if the column is part of the table's group key.
+     */
+    var isGroup: Boolean,
+
+    /**
+     * Default value to be used for rows whose string value is the empty string.
+     */
+    var defaultValue: String
+)
+```
+
+**Client library implementations:**
+
+* [Java](https://github.com/bonitoo-io/flux-java/blob/master/src/main/java/io/bonitoo/flux/dto/FluxColumn.java)
+
+#### FluxRecord
+
+A record is a tuple of values. 
+
+Each record in the table represents a single point in the series.
+
+```kotlin
+data class FluxRecord (
+
+    /**
+     * The Index of the table that the record belongs.
+     */
+    val table: Int,
+
+    /**
+     * The record's values.
+     */
+    val values: LinkedHashMap<String, Any>) {
+
+    /**
+     * Get FluxRecord value by index.
+     */
+    fun getValueByIndex(index: Int): Any? {
+        return values.values.toTypedArray()[index]
+    }
+
+    /**
+     * Get FluxRecord value by key.
+     */
+    fun getValueByKey(key: String): Any? {
+        return values[key]
+    }
 }
 ```
 
-**The `FluxResult` code structure**
-```typescript
-struct FluxResult {
-    
-    List<Table> tables
-}
+**Client library implementations:**
 
-struct Table {
-
-    List<Record> records
-}
-
-struct Record {
-    
-    String field
-    String measurement
-    Map<String, String> tags
-
-    Time start
-    Time stop
-    Time time
-    
-    Object value
-}
-```
-
-#### Naming
-
-Client libraries SHOULD follow function/method/class names mentioned in this document, keeping in mind the naming conventions of the language they’re working in.
-
-Libraries MUST NOT offer functions/methods/classes with the same or similar names to ones given here, but with different semantics.
-
-#### Unit tests
-Client libraries SHOULD have unit tests covering the core instrumentation library and mapping.
-
+* [Java](https://github.com/bonitoo-io/flux-java/blob/master/src/main/java/io/bonitoo/flux/dto/FluxRecord.java)
 
 ## The functionality
 The following description helps to understand how to write the proper client library.  
