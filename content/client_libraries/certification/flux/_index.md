@@ -16,6 +16,14 @@ MUST/MUST NOT/SHOULD/SHOULD NOT/MAY have the meanings given in [https://www.ietf
 * Querying and manipulating time series data by Flux language.
 * Parsing Flux CSV Response format to language native objects.
 
+
+### Documentation:
+
+* [Flux Specification](https://github.com/influxdata/platform/blob/master/query/docs/SPEC.md#flux-specification)
+* [InfluxDB 2.0 Platform](https://github.com/influxdata/platform/tree/master/query#flux---influx-data-language)
+* [Learning Flux (#fluxlang) is About As Difficult As Learning an API](https://www.influxdata.com/blog/learning-flux-fluxlang-is-about-as-difficult-as-learning-an-api/)
+* [Flux (#fluxlang): a new (time series) data scripting language](https://www.youtube.com/watch?v=f5gVpHHKfUM)
+
 ### Overall structure
 
 Clients SHOULD generally follow the structure described here. 
@@ -358,3 +366,10 @@ data class FluxRecord (
 **Client library implementations:**
 
 * [Java](https://github.com/bonitoo-io/flux-java/blob/master/src/main/java/io/bonitoo/flux/dto/FluxRecord.java)
+
+## Client Libraries
+
+| Name                  | Language  | Maintainers                                                                       | Home                                                          |
+------------------------|-----------|-----------------------------------------------------------------------------------|---------------------------------------------------------------|
+| flux-java             | Java      | [Bonitoo.io](https://www.bonitoo.io), [Jakub Bednar](https://github.com/bednar)   | [GitHub](https://github.com/bonitoo-io/flux-java)             |
+| flux-java-reactive    | RxJava    | [Bonitoo.io](https://www.bonitoo.io), [Jakub Bednar](https://github.com/bednar)   | [GitHub](https://github.com/bonitoo-io/flux-java-reactive)    |
