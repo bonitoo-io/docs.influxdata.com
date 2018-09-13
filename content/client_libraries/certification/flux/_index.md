@@ -126,19 +126,16 @@ The client MUST provide functionality to:
 interface FluxClient {
 
     /**
-     * Execute a Flux query against the Flux server and asynchronous stream FluxRecords to "onNext" consumer.
+     * Execute a Flux query against the Flux server. The FluxRecords are asynchronous streamed to "onNext" consumer.
      *
-     * @param onComplete callback to consume a completion notification, TRUE if query successfully finish
-     * @param onError callback to consume any error notification
-     * 
-     * @return Cancellable that provide the cancel method to stop asynchronous query
+     * @param onNext     callback to consume result which are matched the query with capability to discontinue a streaming query
+     * @param onComplete callback to consume a notification about successfully end of stream
+     * @param onError    callback to consume any error notification
      */
-    fun flux(query: String, vararg options: Option, onNext: Consumer<FluxRecord>, onComplete: Consumer<Boolean>, onError: Consumer<Throwable>): Cancellable
+    fun flux(query: String, vararg options: Option, onNext: BiConsumer<Cancellable, FluxRecord>, onComplete: Runnable, onError: Consumer<Throwable>)
 
     /**
-     * Execute a Flux query against the Flux server and asynchronous stream HTTP response to "onResponse" consumer.
-     *
-     * @return Cancellable that provide the cancel method to stop asynchronous query
+     * Execute a Flux query against the Flux server and asynchronous stream the HTTP response to "onResponse" consumer.
      */
     fun fluxRaw(query: String, vararg options: Option, onResponse: Consumer<HttpResponse>)
 }
